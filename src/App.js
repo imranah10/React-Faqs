@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+// import { Question } from "./data/Data";
+import {useState} from 'react'
+import Faqs from "./Faqs";
+
+
 
 function App() {
+  // let [showans,setShowans]=useState(Question[0].id)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Faqs />
+      
+      {/* <div className="faqcontainer">
+        {Question.map((faqitems,i)=>{
+          return(
+            <div className="faqitembox">
+            <h2 onClick={()=>setShowans(faqitems.id)}>{faqitems.question}</h2>
+            <p className={showans==faqitems.id ? 'showanswer':''}>
+              {faqitems.answer}
+            </p>
+          </div>
+          )
+        })}
+       
+      </div> */}
     </div>
   );
 }
